@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- allow cleartext for the local dev server only -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">192.168.100.156</domain>
+    </domain-config>
+
+    <!-- keep default behavior for everything else -->
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

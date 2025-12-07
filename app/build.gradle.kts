@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -58,11 +60,11 @@ dependencies {
     // -----------------------
     // Use the BOM to keep all Firebase libraries on a consistent compatible version.
     implementation(platform("com.google.firebase:firebase-bom:32.1.0"))
-
     // Add the Firebase libraries WITHOUT versions — the BoM controls versions.
     implementation("com.google.firebase:firebase-auth-ktx")       // Auth
     implementation("com.google.firebase:firebase-database-ktx")   // Realtime Database
     implementation("com.google.firebase:firebase-firestore-ktx")  // Firestore
+    implementation ("com.google.firebase:firebase-messaging")
 
     // -----------------------
     // Coroutines support

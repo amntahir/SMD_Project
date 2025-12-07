@@ -5,17 +5,16 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import com.example.smd_project.Login
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main) // your splash layout
 
-        // Splash for 5 seconds, then go to Login
+        // Splash for 5 seconds, then go to Choose Login
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this@MainActivity, Login::class.java))
+            startActivity(Intent(this@MainActivity, ChooseLoginActivity::class.java))
             finish() // prevent going back to splash
         }, 5000)
     }
