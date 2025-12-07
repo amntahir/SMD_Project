@@ -17,8 +17,8 @@
 
         <ImageButton
             android:id="@+id/btnBackBrowse"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:background="@android:color/transparent"
             android:contentDescription="Back"
             android:src="@drawable/back" />
@@ -57,6 +57,16 @@
             android:layout_height="48dp"
             android:contentDescription="Search"
             android:src="@drawable/ic_search"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"/>
+
+        <!-- NEW: voice search mic button -->
+        <ImageButton
+            android:id="@+id/btnvoicesearch"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Voice search"
+            android:src="@android:drawable/ic_btn_speak_now"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="10dp"/>
     </LinearLayout>
